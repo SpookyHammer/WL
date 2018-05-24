@@ -1,0 +1,72 @@
+@import "_variables";
+
+:host{
+    /*basics*/
+    background-color: $primary;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 15%;
+    min-height: 150px;
+    width: 100%;
+
+    /*content*/
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Header User*/
+#headerUserWrapper {
+    flex: 1;
+    height: 75%;
+    align-self: center;
+    margin-left: 5px;
+    display: flex;
+}
+#headerUserWrapper img{
+    height: 100%;
+}
+#headerUserWrapper h3{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5px;
+}
+
+/*Header Logo*/
+#headerLogoWrapper {
+    flex: 1;
+    height: 90%;
+    align-self: center;
+}
+#headerLogoWrapper img{
+    display: block;
+    height: 100%;
+    margin: auto;
+}
+#headerNavWrapper{
+    align-self: flex-end;
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+
+/*Header Navigations*/
+#headerNav{
+    align-content: flex-end;
+    margin-right: 5px;
+    display: flex;
+}
+#headerNavC{
+    display: none;
+}
+
+/* all Tags from Component */
+
+a{
+    font-size: 2vw;
+    margin-left: 1vw;
+}
+h3{
+    font-size: 3vw;
+}
