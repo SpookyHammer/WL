@@ -4,10 +4,7 @@
     /*basics*/
     background-color: $primary;
     position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 15%;
-    min-height: 150px;
+    height: 25%;
     width: 100%;
 
     /*content*/
@@ -26,6 +23,7 @@
 }
 #headerUserWrapper img{
     height: 100%;
+    border-radius: 50%;
 }
 #headerUserWrapper h3{
     margin-top: auto;

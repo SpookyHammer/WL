@@ -1,6 +1,6 @@
 <div id="headerUserWrapper">
-  <img id="headerUserPicture" alt="user.picture" src="../../../assets/images/DefaultUserPicture.png" />
-  <h3>user.name</h3>
+  <img ng-if="isLoggedIn" class="headerUserPicture" alt="user.picture" src="{{ user.photoUrl }}"/>
+  <h3 ng-if="user != null"> {{ user.name }}</h3>
 </div>
 <div id="headerLogoWrapper">
   <img id="headerLogoPicture" alt="Logo" src="../../../assets/images/logo 400x400-borderedRound.png"/>
@@ -10,7 +10,7 @@
     <a href="#">Subscripties</a>
     <a href="#">Opties</a>
     <a href="#">Help</a>
-    <a href="#">Afmelden</a>
+    <a href="#" (click)="LogOut()">Afmelden</a>
   </div>
   <div id="headerNavC">
     <img id="burgerIcon" alt="burger" src="../../../assets/images/burger.png"/>
@@ -18,7 +18,7 @@
       <a href="#">Subscripties</a>
       <a href="#">Opties</a>
       <a href="#">Help</a>
-      <a href="#">Afmelden</a>
+      <a href="#" ng-click="LogOut()">Afmelden</a>
     </div>
   </div>
 </div>

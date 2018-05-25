@@ -15,6 +15,12 @@ import { MasterComponent } from './pages/master/master.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ListsComponent } from './pages/lists/lists.component';
 import { FriendsComponent } from './pages/friends/friends.component';
+import { ItemsComponent } from './pages/items/items.component';
+
+
+import { wishlistsService } from './services/wishlists.service';
+import { wishitemsService } from './services/wishitems.service';
+import { wishusersService } from './services/wishusers.service';
 
 
 
@@ -33,14 +39,19 @@ let config = new AuthServiceConfig([
     MasterComponent,
     HeaderComponent,
     ListsComponent,
-    FriendsComponent
+    FriendsComponent,
+    ItemsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     SocialLoginModule.initialize(config)
   ],
-  providers: [],
+  providers: [
+    wishlistsService,
+    wishitemsService,
+    wishusersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

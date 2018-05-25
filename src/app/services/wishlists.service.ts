@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { wishList } from '../../domain/wishList';
 
 
 const httpOptions = {
@@ -10,15 +11,19 @@ const httpOptions = {
 @Injectable()
 export class wishlistsService {
 
-    private apiRoot : string = "https://wishlisht.azurewebsites.net/api";
+  private httpClient : HttpClient;
+  public list : Observable<wishList>;
 
-    constructor(public http: HttpClient) {}
+  private apiRoot : string = "https://wishlisht.azurewebsites.net/api";
 
-    public getWishlistById( id: number) {
-      return this.http.get(this.apiRoot + "/WishUsers/" + id)
-        .subscribe(
-          data => console.log(data),
-          err => console.log(err)
-        );
-    }
+  constructor(public http: HttpClient) {}
+
+  public getWishlistById(id: number) : Observable<wishList> {
+    return this.http.get<wishList>(this.apiRoot + "/WishLists/" + id)
   }
+}
+
+interface getWishlistById {
+  id: number;
+  name: string;
+}

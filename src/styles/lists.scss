@@ -1,0 +1,12 @@
+@import "_variables";
+:host{
+    position: absolute;
+    left: 0px;
+    top: 25%;
+    height: 75%;
+    width: 25%;
+    padding: 10px;
+}
+h3{
+    color: $secundary;
+}

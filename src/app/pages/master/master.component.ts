@@ -6,10 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./master.component.sass']
 })
 export class MasterComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
   }
-
 }

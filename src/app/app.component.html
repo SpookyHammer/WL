@@ -1,2 +1,5 @@
-<app-login style="display: none;"></app-login>
-<app-master></app-master>
+
+<app-master ng-if="IsLoggedIn; else NotLoggedIn"></app-master>
+<ng-template #NotLoggedIn>
+    <app-login (LogOut)="SignOut($event)" ></app-login>
+</ng-template>
