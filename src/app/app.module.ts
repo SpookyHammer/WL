@@ -21,6 +21,7 @@ import { ItemsComponent } from './pages/items/items.component';
 import { wishlistsService } from './services/wishlists.service';
 import { wishitemsService } from './services/wishitems.service';
 import { wishusersService } from './services/wishusers.service';
+import { fbAuthService } from './services/fbAuth.service';
 
 
 
@@ -50,7 +51,8 @@ let config = new AuthServiceConfig([
   providers: [
     wishlistsService,
     wishitemsService,
-    wishusersService
+    wishusersService,
+    fbAuthService
   ],
   bootstrap: [AppComponent]
 })

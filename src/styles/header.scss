@@ -22,8 +22,8 @@
     display: flex;
 }
 #headerUserWrapper img{
-    height: 100%;
     border-radius: 50%;
+    height: 100%;
 }
 #headerUserWrapper h3{
     margin-top: auto;
@@ -42,14 +42,14 @@
     height: 100%;
     margin: auto;
 }
+
+
+/*Header Navigations*/
 #headerNavWrapper{
     align-self: flex-end;
     flex: 1;
     margin-bottom: 15px;
 }
-
-
-/*Header Navigations*/
 #headerNav{
     align-content: flex-end;
     margin-right: 5px;

@@ -11,7 +11,6 @@ const httpOptions = {
 @Injectable()
 export class wishlistsService {
 
-  private httpClient : HttpClient;
   public list : Observable<wishList>;
 
   private apiRoot : string = "https://wishlisht.azurewebsites.net/api";

@@ -24,7 +24,7 @@ export class AppComponent {
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.isLoggedIn = (user != null);
-      console.log(this.isLoggedIn);
+      console.log("app.component [Is logged in] : " + this.isLoggedIn);
     });
   }
   

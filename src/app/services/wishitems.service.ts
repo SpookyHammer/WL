@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
+import { wishItem } from '../../domain/wishItem';
 
 
 const httpOptions = {
@@ -15,4 +16,7 @@ export class wishitemsService {
 
   constructor(public http: HttpClient) {}
 
+  public getWishitemById(id: number) : Observable<wishItem> {
+    return this.http.get<wishItem>(this.apiRoot + "/WishItems/" + id)
+  }
 }
